@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@500&family=Nova+Mono&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1920px;
+  height: auto;
+  margin: 0 auto;
+  font-family: "Noto Sans SC", Arial, sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000;
+  overflow: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  width: 225px;
+  height: 60px;
+  border: 1px solid transparent;
+  background: linear-gradient(45deg, #496bfe 0%, #496bfe 40%, #5474fd 40%, #5474fd 100%);
+  padding: 15px 50px;
+  color: #fff;
+  font-family: "Noto Sans SC", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+.btn__arrow {
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-60%);
+}
+.btn:hover, .btn:focus {
+  background: linear-gradient(45deg, #5474fd 0%, #5474fd 40%, #496bfe 40%, #496bfe 100%);
+}
+.btn:hover .btn__arrow, .btn:focus .btn__arrow {
+  transform: translate(8px, -60%);
+  transition-duration: 0.3s;
+}
+.btn:active {
+  border: 1px solid #0039ff;
+  opacity: 0.9;
+}
+
+.search {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.search__form {
+  width: 650px;
+  height: 60px;
+  border: 2px solid #0039ff;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  margin: 100px auto 0;
+}
+@media screen and (max-width: 850px) {
+  .search__form {
+    width: 75vw;
+  }
+}
+@media screen and (max-width: 520px) {
+  .search__form {
+    height: 30px;
+  }
+}
+.search__input {
+  width: 78%;
+  height: 100%;
+  margin: 0;
+  padding: 0 10px;
+  background: #fff;
+  outline: none;
+  border: none;
+  font-family: "Nova Mono", "Roboto Mono", monospace;
+  font-size: 20px;
+  color: #5474fd;
+  letter-spacing: 0.1em;
+}
+@media screen and (max-width: 520px) {
+  .search__input {
+    width: 88%;
+  }
+}
+.search__input::-ms-clear {
+  padding: 10px;
+}
+.search__input::placeholder {
+  font-family: "Nova Mono", "Roboto Mono", monospace;
+  font-size: 20px;
+  color: rgba(84, 116, 253, 0.5);
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+@media screen and (max-width: 850px) {
+  .search__input::placeholder {
+    font-size: 2.2vw;
+    text-align: left;
+  }
+}
+@media screen and (max-width: 520px) {
+  .search__input::placeholder {
+    opacity: 0;
+  }
+}
+.search__btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 146px;
+  height: 56px;
+  padding-left: 30px;
+  background: #496bfe;
+  outline: none;
+}
+.search__btn:hover {
+  background: #5474fd;
+}
+@media screen and (max-width: 520px) {
+  .search__btn {
+    width: 12%;
+    height: 26px;
+    padding: 5px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .search__btn-name {
+    display: none;
+  }
+}
+.search__icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+@media screen and (max-width: 520px) {
+  .search__icon {
+    right: 16%;
+  }
+}
+
+.movie__list {
+  width: 100%;
+  height: 50px;
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.movie__item {
+  width: 30%;
+  height: auto;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+.movie__btn {
+  display: block;
+  text-decoration: none;
+  width: 100px;
+  height: 30px;
+  margin: 10px auto;
+  border: 1px solid #fff;
+  border-radius: 25px;
+  font-size: 10px;
+  padding: 6px 0;
+  letter-spacing: 0;
+  box-shadow: 0 0 10px 1px #000;
+}
+.movie__no-movies {
+  width: 100%;
+  height: auto;
+  margin-top: 30px;
+  text-align: center;
+  font-size: 20px;
+  text-shadow: 0 0 3px #000;
+  color: #fff;
+}
+.movie__title, .movie__year {
+  display: block;
+  line-height: 1.5;
+  color: #000;
+  font-weight: 500;
+  text-shadow: 0 0 3px #fff;
+}
+.movie__title {
+  font-size: 1.5vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.movie__year {
+  font-size: 1.5vw;
+}
+.movie__poster-wrapper {
+  width: 100%;
+}
+.movie__poster {
+  width: 100%;
+  height: auto;
+}
+.movie__poster-placeholder {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #cfcfcf;
+  box-shadow: inset 0 0 100px 1px #5474fd;
+}
+.movie__no-poster {
+  width: 100%;
+  height: auto;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.logo-img {
+  width: 10vw;
+  height: auto;
+}
+
+.logo-title {
+  margin: 0 0 0 6%;
+  font-family: "Nova Mono", "Roboto Mono", monospace;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 6vw;
+  letter-spacing: 0.1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=style.css.map */
