@@ -10,7 +10,7 @@
           // Пустой HTML для вывода на страницу данных, которые вернули в результате поиска
           movieHTML = "";
       $.ajax({
-        url: 'http://www.omdbapi.com/?apikey=' + apikey + '&s=' + searchMovie + '&y=' + '&plot=full' + '&r=json',
+        url: 'https://www.omdbapi.com/?apikey=' + apikey + '&s=' + searchMovie + '&y=' + '&plot=full' + '&r=json',
         method: 'GET',
         dataType: 'json',
         success: function (data) {
